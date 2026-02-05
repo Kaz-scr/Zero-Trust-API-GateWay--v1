@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero-Trust API Gateway Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Zero-Trust API Gateway Dashboard</h1>
+  </header>
+
+  <main>
+    <section class="stats">
+      <h2>Request Statistics</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="label">Allowed</span>
+          <span id="allow-count" class="value">-</span>
+        </div>
+        <div class="card">
+          <span class="label">Denied</span>
+          <span id="deny-count" class="value">-</span>
+        </div>
+        <div class="card">
+          <span class="label">Uptime</span>
+          <span id="uptime" class="value">-</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="audit">
+      <h2>Recent Audit Log</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Method</th>
+              <th>Path</th>
+              <th>Decision</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="audit-body">
+            <tr><td colspan="5">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="policies">
+      <h2>Active Policies</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Path</th>
+              <th>Roles</th>
+            </tr>
+          </thead>
+          <tbody id="policies-body">
+            <tr><td colspan="3">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/dashboard/app.js"></script>
+</body>
+</html>
