@@ -1,0 +1,38 @@
+===== Go =====
+bin/
+dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+.out
+
+Go workspace
+/go.work
+/go.work.sum
+.cursor/
+===== Environment / Secrets =====
+.env
+.env.
+!.env.example
+
+===== Logs =====
+*.log
+
+===== OS =====
+.DS_Store
+Thumbs.db
+
+===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+===== Node (dashboard later) =====
+node_modules/
+
+===== Coverage =====
+coverage.out
